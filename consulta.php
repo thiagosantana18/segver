@@ -13,5 +13,6 @@
         #$senha = $_POST['senha'];
         
         $select = $conn->select($login, $senha);
-        var_dump($select);  
+        echo json_encode($select);  
     }
+?>

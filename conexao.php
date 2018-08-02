@@ -9,7 +9,7 @@
 
         public function select($login, $senha) {
             
-            $stmt = $this->pdo->prepare("select * from login where login = ':plogin' and senha = ':psenha'");
+            $stmt = $this->pdo->prepare("select * from login where login = :plogin and senha = :psenha");
             $stmt->bindValue(':plogin', $login);
             $stmt->bindValue(':psenha', $senha);
             $run = $stmt->execute();
